@@ -44,12 +44,8 @@ export default function Home() {
   return (
     <>
       <main className="h-[100vh] bg-black flex flex-col justify-center align-middle items-center pt-2">
-        <div>
-        <p className="text-white shadow-red-800	shadow-lg text-3xl mb-2 pt-5">{win}</p>
-        </div>
         <table className=" text-center text-5xl bg-white w-3/4 m-auto h-[70%]">
           <tbody className="border-[5px] border-red-600 ">
-
             <tr className=" h-auto">
               <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(0)}>{lista[0]}</td>
               <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(1)}>{lista[1]}</td>
@@ -67,6 +63,9 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
+        <div>
+          <p className="text-white shadow-red-800	shadow-lg text-3xl mb-2 pt-5">{win}</p>
+        </div>
         <button className="bg-red-600 text-white p-4 mb-20 rounded-md" onClick={resetar}>Resetar</button>
       </main>
     </>
