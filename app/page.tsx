@@ -8,6 +8,7 @@ export default function Home() {
   const [jogavel, setJogavel] = useState(true)
 
   function jogar(i: number) {
+
     if (lista[i] == "") {
       if (jogada == 'X') {
         setJogada("0")
@@ -51,37 +52,37 @@ export default function Home() {
             {jogavel ? (
               <>
                 <tr className=" h-auto">
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" onClick={() => jogar(0)}>{lista[0]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" onClick={() => jogar(1)}>{lista[1]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" onClick={() => jogar(2)}>{lista[2]}</td>
+                  <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(0)}>{lista[0]}</td>
+                  <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(1)}>{lista[1]}</td>
+                  <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(2)}>{lista[2]}</td>
                 </tr>
                 <tr className="border h-auto">
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" onClick={() => jogar(3)}>{lista[3]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" onClick={() => jogar(4)}>{lista[4]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" onClick={() => jogar(5)}>{lista[5]}</td>
+                  <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(3)}>{lista[3]}</td>
+                  <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(4)}>{lista[4]}</td>
+                  <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(5)}>{lista[5]}</td>
                 </tr>
                 <tr className="border h-auto">
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" onClick={() => jogar(6)}>{lista[6]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" onClick={() => jogar(7)}>{lista[7]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" onClick={() => jogar(8)}>{lista[8]}</td>
+                  <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(6)}>{lista[6]}</td>
+                  <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(7)}>{lista[7]}</td>
+                  <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(8)}>{lista[8]}</td>
                 </tr>
               </>
             ) : (
               <>
                 <tr className=" h-auto">
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" >{lista[0]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" >{lista[1]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" >{lista[2]}</td>
+                  <td className="w-[33.3%] hover:bg-red-900 duration-500 border h-[33.3%]" >{lista[0]}</td>
+                  <td className="w-[33.3%] hover:bg-red-900 duration-500 border h-[33.3%]" >{lista[1]}</td>
+                  <td className="w-[33.3%] hover:bg-red-900 duration-500 border h-[33.3%]" >{lista[2]}</td>
                 </tr>
                 <tr className="border h-auto">
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" >{lista[3]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" >{lista[4]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" >{lista[5]}</td>
+                  <td className="w-[33.3%] hover:bg-red-900 duration-500 border h-[33.3%]" >{lista[3]}</td>
+                  <td className="w-[33.3%] hover:bg-red-900 duration-500 border h-[33.3%]" >{lista[4]}</td>
+                  <td className="w-[33.3%] hover:bg-red-900 duration-500 border h-[33.3%]" >{lista[5]}</td>
                 </tr>
                 <tr className="border h-auto">
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" >{lista[6]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" >{lista[7]}</td>
-                  <td className="w-[33.3%] xl:hover-bg-red-400  duration-500 border h-[33.3%]" >{lista[8]}</td>
+                  <td className="w-[33.3%] hover:bg-red-900 duration-500 border h-[33.3%]" >{lista[6]}</td>
+                  <td className="w-[33.3%] hover:bg-red-900 duration-500 border h-[33.3%]" >{lista[7]}</td>
+                  <td className="w-[33.3%] hover:bg-red-900 duration-500 border h-[33.3%]" >{lista[8]}</td>
                 </tr>
               </>
             )}
