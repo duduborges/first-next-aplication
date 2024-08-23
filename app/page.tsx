@@ -16,15 +16,21 @@ export default function Home() {
       verificarVitoria()
     }
   }
+  function resetar() {
+    setLista(['', '', '', '', '', '', '', '', ''])
+  }
   function verificarVitoria() {
-    if (lista[2] == lista[5] && lista[2] == lista[8] && lista[2] != "") alert(`"${jogada}" Venceu o jogo`)
-    if (lista[0] == lista[1] && lista[0] == lista[2] && lista[0] != "") alert(`"${jogada}" Venceu o jogo`)
-    if (lista[3] == lista[4] && lista[3] == lista[5] && lista[3] != "") alert(`"${jogada}" Venceu o jogo`)
-    if (lista[6] == lista[7] && lista[6] == lista[8] && lista[6] != "") alert(`"${jogada}" Venceu o jogo`)
-    if (lista[0] == lista[3] && lista[0] == lista[6] && lista[0] != "") alert(`"${jogada}" Venceu o jogo`)
-    if (lista[0] == lista[4] && lista[0] == lista[8] && lista[0] != "") alert(`"${jogada}" Venceu o jogo`)
-    if (lista[1] == lista[4] && lista[1] == lista[7] && lista[1] != "") alert(`"${jogada}" Venceu o jogo`)
-    if (lista[2] == lista[4] && lista[2] == lista[6] && lista[2] != "") alert(`"${jogada}" Venceu o jogo`)
+    if (lista[2] == lista[5] && lista[2] == lista[8] && lista[2] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] == lista[1] && lista[0] == lista[2] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[3] == lista[4] && lista[3] == lista[5] && lista[3] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[6] == lista[7] && lista[6] == lista[8] && lista[6] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] == lista[3] && lista[0] == lista[6] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] == lista[4] && lista[0] == lista[8] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[1] == lista[4] && lista[1] == lista[7] && lista[1] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[2] == lista[4] && lista[2] == lista[6] && lista[2] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else { alert("Deu velha") }
+
+
   }
 
   return (
@@ -50,6 +56,7 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
+        <button onClick={resetar}>Resetar</button>
       </main>
     </>
   );
