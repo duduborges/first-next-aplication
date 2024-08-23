@@ -16,6 +16,11 @@ export default function Home() {
       verificarVitoria()
     }
   }
+  function deuVelha() {
+    alert("Deu velha")
+    setLista(['', '', '', '', '', '', '', '', ''])
+
+  }
   function resetar() {
     setLista(['', '', '', '', '', '', '', '', ''])
   }
@@ -28,7 +33,7 @@ export default function Home() {
     else if (lista[0] == lista[4] && lista[0] == lista[8] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
     else if (lista[1] == lista[4] && lista[1] == lista[7] && lista[1] != "") { alert(`"${jogada}" Venceu o jogo`) }
     else if (lista[2] == lista[4] && lista[2] == lista[6] && lista[2] != "") { alert(`"${jogada}" Venceu o jogo`) }
-    else if (lista[0] != '' && lista[1] != '' && lista[2] != '' && lista[3] != '' && lista[4] != '' && lista[5] != '' && lista[6] != '' && lista[7] != '' && lista[8]) { alert("Deu velha") }
+    else if (lista[0] != '' && lista[1] != '' && lista[2] != '' && lista[3] != '' && lista[4] != '' && lista[5] != '' && lista[6] != '' && lista[7] != '' && lista[8]) { return (deuVelha()) }
 
 
   }
