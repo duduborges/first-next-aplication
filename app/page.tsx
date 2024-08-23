@@ -24,6 +24,7 @@ export default function Home() {
 
   }
   function resetar() {
+    setWin("")
     setLista(['', '', '', '', '', '', '', '', ''])
   }
   function verificarVitoria() {
@@ -43,7 +44,9 @@ export default function Home() {
   return (
     <>
       <main className="h-[100vh] bg-black flex flex-col justify-center align-middle items-center pt-2">
-        <p className="text-white shadow-red-800	shadow-lg text-3xl mb-2 pt-2">{win}</p>
+        <div>
+        <p className="text-white shadow-red-800	shadow-sm text-3xl mb-2 pt-2">{win}</p>
+        </div>
         <table className=" text-center text-5xl bg-white w-3/4 m-auto h-[70%]">
           <tbody className="border-[5px] border-red-600 ">
 
