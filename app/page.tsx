@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <>
       <main className="h-[100vh] bg-black flex flex-col justify-center align-middle items-center">
-        <p className="text-white text-xl">{win}</p>
+        <p className="text-white text-xl my-2">{win}</p>
         <table className=" text-center text-5xl bg-white w-3/4 m-auto h-[70%]">
           <tbody className="border-[5px] border-red-600 ">
 
