@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="h-[100vh] bg-black flex flex-row justify-center align-middle items-center">
+      <main className="h-[100vh] bg-black flex flex-col justify-center align-middle items-center">
         <table className=" text-center text-5xl bg-white w-3/4 m-auto h-[70%]">
           <tbody className="border-[5px] border-red-600 ">
 
@@ -54,8 +54,8 @@ export default function Home() {
               <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(8)}>{lista[8]}</td>
             </tr>
           </tbody>
-          <button onClick={resetar}>Resetar</button>
         </table>
+        <button className="bg-red-600 text-white p-4" onClick={resetar}>Resetar</button>
       </main>
     </>
   );
