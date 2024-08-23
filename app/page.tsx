@@ -28,7 +28,6 @@ export default function Home() {
     else if (lista[0] == lista[4] && lista[0] == lista[8] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
     else if (lista[1] == lista[4] && lista[1] == lista[7] && lista[1] != "") { alert(`"${jogada}" Venceu o jogo`) }
     else if (lista[2] == lista[4] && lista[2] == lista[6] && lista[2] != "") { alert(`"${jogada}" Venceu o jogo`) }
-    else { alert("Deu velha") }
 
 
   }
@@ -55,8 +54,8 @@ export default function Home() {
               <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" onClick={() => jogar(8)}>{lista[8]}</td>
             </tr>
           </tbody>
+          <button onClick={resetar}>Resetar</button>
         </table>
-        <button onClick={resetar}>Resetar</button>
       </main>
     </>
   );
