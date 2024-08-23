@@ -28,6 +28,7 @@ export default function Home() {
     else if (lista[0] == lista[4] && lista[0] == lista[8] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
     else if (lista[1] == lista[4] && lista[1] == lista[7] && lista[1] != "") { alert(`"${jogada}" Venceu o jogo`) }
     else if (lista[2] == lista[4] && lista[2] == lista[6] && lista[2] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] != '' && lista[1] != '' && lista[2] != '' && lista[3] != '' && lista[4] != '' && lista[5] != '' && lista[6] != '' && lista[7] != '' && lista[8]) { alert("Deu velha") }
 
 
   }
@@ -55,7 +56,7 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
-        <button className="bg-red-600 text-white p-4" onClick={resetar}>Resetar</button>
+        <button className="bg-red-600 text-white p-4 mb-20 rounded-md" onClick={resetar}>Resetar</button>
       </main>
     </>
   );
