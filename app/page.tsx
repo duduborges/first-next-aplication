@@ -26,6 +26,7 @@ export default function Home() {
   }
   function resetar() {
     setWin("")
+    setJogavel(true)
     setLista(['', '', '', '', '', '', '', '', ''])
   }
   function verificarVitoria() {
@@ -67,7 +68,7 @@ export default function Home() {
               </>
             ) : (
               <>
-               <tr className=" h-auto">
+                <tr className=" h-auto">
                   <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" >{lista[0]}</td>
                   <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" >{lista[1]}</td>
                   <td className="w-[33.3%] hover:bg-red-400 duration-500 border h-[33.3%]" >{lista[2]}</td>
@@ -88,7 +89,7 @@ export default function Home() {
           </tbody>
         </table>
         <div>
-          <p className="text-red-800 shadow-white drop-shadow-lg text-3xl  py-4">{win}</p>
+          <p className="text-white underline decoration-red-800 text-3xl  py-4">{win}</p>
         </div>
         <button className="bg-red-600 text-white p-4 mb-20 rounded-md" onClick={resetar}>Resetar</button>
       </main>
