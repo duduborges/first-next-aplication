@@ -4,6 +4,8 @@ import { useState } from "react";
 export default function Home() {
   const [jogada, setJogada] = useState("")
   const [lista, setLista] = useState(['', '', '', '', '', '', '', '', ''])
+  const [win, setWin] = useState("")
+
   function jogar(i: number) {
     if (lista[i] == "") {
       if (jogada == 'X') {
@@ -17,7 +19,7 @@ export default function Home() {
     }
   }
   function deuVelha() {
-    alert("Deu velha")
+    setWin("Deu velha")
     setLista(['', '', '', '', '', '', '', '', ''])
 
   }
@@ -25,14 +27,14 @@ export default function Home() {
     setLista(['', '', '', '', '', '', '', '', ''])
   }
   function verificarVitoria() {
-    if (lista[2] == lista[5] && lista[2] == lista[8] && lista[2] != "") { alert(`"${jogada}" Venceu o jogo`) }
-    else if (lista[0] == lista[1] && lista[0] == lista[2] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
-    else if (lista[3] == lista[4] && lista[3] == lista[5] && lista[3] != "") { alert(`"${jogada}" Venceu o jogo`) }
-    else if (lista[6] == lista[7] && lista[6] == lista[8] && lista[6] != "") { alert(`"${jogada}" Venceu o jogo`) }
-    else if (lista[0] == lista[3] && lista[0] == lista[6] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
-    else if (lista[0] == lista[4] && lista[0] == lista[8] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
-    else if (lista[1] == lista[4] && lista[1] == lista[7] && lista[1] != "") { alert(`"${jogada}" Venceu o jogo`) }
-    else if (lista[2] == lista[4] && lista[2] == lista[6] && lista[2] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    if (lista[2] == lista[5] && lista[2] == lista[8] && lista[2] != "") { setWin(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] == lista[1] && lista[0] == lista[2] && lista[0] != "") { setWin(`"${jogada}" Venceu o jogo`) }
+    else if (lista[3] == lista[4] && lista[3] == lista[5] && lista[3] != "") { setWin(`"${jogada}" Venceu o jogo`) }
+    else if (lista[6] == lista[7] && lista[6] == lista[8] && lista[6] != "") { setWin(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] == lista[3] && lista[0] == lista[6] && lista[0] != "") { setWin(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] == lista[4] && lista[0] == lista[8] && lista[0] != "") { setWin(`"${jogada}" Venceu o jogo`) }
+    else if (lista[1] == lista[4] && lista[1] == lista[7] && lista[1] != "") { setWin(`"${jogada}" Venceu o jogo`) }
+    else if (lista[2] == lista[4] && lista[2] == lista[6] && lista[2] != "") { setWin(`"${jogada}" Venceu o jogo`) }
     else if (lista[0] != '' && lista[1] != '' && lista[2] != '' && lista[3] != '' && lista[4] != '' && lista[5] != '' && lista[6] != '' && lista[7] != '' && lista[8]) { return (deuVelha()) }
 
 
@@ -41,6 +43,7 @@ export default function Home() {
   return (
     <>
       <main className="h-[100vh] bg-black flex flex-col justify-center align-middle items-center">
+        <p className="text-white text-xl">{win}</p>
         <table className=" text-center text-5xl bg-white w-3/4 m-auto h-[70%]">
           <tbody className="border-[5px] border-red-600 ">
 
