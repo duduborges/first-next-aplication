@@ -64,7 +64,7 @@ export default function Home() {
           </tbody>
         </table>
         <div>
-          <p className="text-white shadow-red-800	shadow-lg text-3xl mb-2 pt-5">{win}</p>
+          <p className="text-white shadow-red-800 drop-shadow-lg text-3xl mb-2 pt-5">{win}</p>
         </div>
         <button className="bg-red-600 text-white p-4 mb-20 rounded-md" onClick={resetar}>Resetar</button>
       </main>
