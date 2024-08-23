@@ -28,14 +28,14 @@ export default function Home() {
     setLista(['', '', '', '', '', '', '', '', ''])
   }
   function verificarVitoria() {
-    if (lista[2] == lista[5] && lista[2] == lista[8] && lista[2] != "") { setWin(`"${jogada}" Venceu o jogo`) }
-    else if (lista[0] == lista[1] && lista[0] == lista[2] && lista[0] != "") { setWin(`"${jogada}" Venceu o jogo`) }
-    else if (lista[3] == lista[4] && lista[3] == lista[5] && lista[3] != "") { setWin(`"${jogada}" Venceu o jogo`) }
-    else if (lista[6] == lista[7] && lista[6] == lista[8] && lista[6] != "") { setWin(`"${jogada}" Venceu o jogo`) }
-    else if (lista[0] == lista[3] && lista[0] == lista[6] && lista[0] != "") { setWin(`"${jogada}" Venceu o jogo`) }
-    else if (lista[0] == lista[4] && lista[0] == lista[8] && lista[0] != "") { setWin(`"${jogada}" Venceu o jogo`) }
-    else if (lista[1] == lista[4] && lista[1] == lista[7] && lista[1] != "") { setWin(`"${jogada}" Venceu o jogo`) }
-    else if (lista[2] == lista[4] && lista[2] == lista[6] && lista[2] != "") { setWin(`"${jogada}" Venceu o jogo`) }
+    if (lista[2] == lista[5] && lista[2] == lista[8] && lista[2] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] == lista[1] && lista[0] == lista[2] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[3] == lista[4] && lista[3] == lista[5] && lista[3] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[6] == lista[7] && lista[6] == lista[8] && lista[6] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] == lista[3] && lista[0] == lista[6] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[0] == lista[4] && lista[0] == lista[8] && lista[0] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[1] == lista[4] && lista[1] == lista[7] && lista[1] != "") { alert(`"${jogada}" Venceu o jogo`) }
+    else if (lista[2] == lista[4] && lista[2] == lista[6] && lista[2] != "") { alert(`"${jogada}" Venceu o jogo`) }
     else if (lista[0] != '' && lista[1] != '' && lista[2] != '' && lista[3] != '' && lista[4] != '' && lista[5] != '' && lista[6] != '' && lista[7] != '' && lista[8]) { return (deuVelha()) }
 
 
@@ -64,7 +64,7 @@ export default function Home() {
           </tbody>
         </table>
         <div>
-          <p className="text-white shadow-red-800 drop-shadow-lg text-3xl mb-2 pt-5">{win}</p>
+          <p className="text-red-800 shadow-white drop-shadow-lg text-3xl  py-4">{win}</p>
         </div>
         <button className="bg-red-600 text-white p-4 mb-20 rounded-md" onClick={resetar}>Resetar</button>
       </main>
